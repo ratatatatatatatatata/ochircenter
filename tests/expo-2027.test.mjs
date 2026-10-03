@@ -8,8 +8,8 @@ const home = read('index.html');
 const standalone = read('expo-2027.html');
 const controller = read('ngo-website/js/expo-2027.js');
 
-test('Expo precedes the preserved original homepage sections', () => {
-  assert.ok(home.indexOf('id="expo-2027"') < home.indexOf('id="ochir-center"'));
+test('One site header precedes Expo, followed by preserved organizational sections', () => {
+  assert.ok(home.indexOf('id="ochir-center"') < home.indexOf('id="expo-2027"'));
   for (const id of ['home', 'mission', 'projects', 'contact', 'contactForm']) {
     assert.ok(home.indexOf(`id="${id}"`) > home.indexOf('id="ochir-center"'), id);
   }
@@ -27,9 +27,9 @@ for (const [name, html] of [['home', home], ['standalone', standalone]]) {
     for (const lang of ['mn', 'en']) assert.ok(html.includes(`data-expo-language="${lang}"`));
     assert.ok(html.includes('mailto:ceo@ochircenter.org?subject='));
     assert.ok(html.includes('tel:+97699682882'));
-    assert.ok(html.includes('Sending an enquiry does not confirm participation.'));
+    assert.ok(html.includes(name === 'standalone' ? 'Sending an enquiry does not confirm participation.' : 'The website does not send it automatically.'));
     assert.ok(html.includes('Exact dates and the exhibition venue will be announced once confirmed.'));
-    for (const path of ['ngo-website/css/expo-2027.css', 'ngo-website/js/expo-2027.js']) {
+    for (const path of ['ngo-website/css/expo-2027.css', name === 'standalone' ? 'ngo-website/js/expo-2027.js' : 'ngo-website/js/home-unified.js']) {
       assert.ok(html.includes(path));
       assert.ok(existsSync(new URL('../' + path, import.meta.url)));
     }
