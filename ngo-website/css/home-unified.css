@@ -1,0 +1,160 @@
+/* One homepage shell; the standalone Expo and other site pages keep their styles. */
+.ochir-home {
+  --ink: #122b45;
+  --muted: #526575;
+  --paper: #f7f5ef;
+  --line: #d7dedf;
+  --accent: #b63632;
+  font-family: Arial, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.7;
+}
+.ochir-home [hidden] { display: none !important; }
+.ochir-home .container, .ochir-home .oc-expo-wrap { width: min(1180px, calc(100% - 64px)); max-width: none; margin-inline: auto; padding-inline: 0; }
+.ochir-home a { color: inherit; }
+.ochir-home a:focus-visible, .ochir-home button:focus-visible, .ochir-home input:focus-visible, .ochir-home textarea:focus-visible { outline: 3px solid #b63632; outline-offset: 4px; }
+.ochir-home section[id], .ochir-home main, .ochir-home .anchor-alias { scroll-margin-top: 100px; }
+.ochir-home .skip-link { position: absolute; top: -120px; left: 20px; z-index: 1000; padding: 12px 18px; background: #fff; }
+.ochir-home .skip-link:focus { top: 12px; }
+.ochir-home .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); }
+.ochir-home .site-header-inner { width: min(1320px, calc(100% - 48px)); min-height: 90px; margin: auto; display: flex; align-items: center; gap: 28px; }
+.ochir-home .site-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.ochir-home .site-brand strong { display: block; font-size: 21px; line-height: 1.25; letter-spacing: -.02em; }
+.ochir-home .site-brand small { display: block; font-size: 10px; letter-spacing: .025em; margin-top: 4px; color: var(--muted); max-width: 180px; line-height: 1.4; }
+/* Display the existing circular mark without modifying the source image. */
+.ochir-home .brand-mark { width: 58px; height: 58px; position: relative; overflow: hidden; flex: 0 0 58px; }
+.ochir-home .brand-mark img { position: absolute; width: 129px; height: 73px; max-width: none; left: -35.5px; top: -7.5px; }
+.ochir-home .site-header nav { margin-left: auto; }
+.ochir-home #site-menu { display: flex; position: static; align-items: center; gap: 22px; width: auto; height: auto; padding: 0; list-style: none; background: transparent; }
+.ochir-home .nav-menu li { margin: 0; }
+.ochir-home .nav-link { display: flex; align-items: center; min-height: 44px; color: var(--ink); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.ochir-home .nav-link:hover { color: var(--accent); text-shadow: none; }
+.ochir-home .header-controls { display: flex; align-items: center; gap: 12px; }
+.ochir-home .site-language { display: flex; border: 1px solid #b5c2cc; border-radius: 3px; overflow: hidden; }
+.ochir-home .site-language button { min-width: 42px; min-height: 44px; border: 0; background: #fff; color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 700; }
+.ochir-home .site-language button[aria-pressed=true] { background: var(--ink); color: #fff; }
+.ochir-home .menu-toggle { display: none; }
+.ochir-home .oc-expo-hero { padding: 60px 0 48px; border-bottom: 0; }
+.ochir-home .oc-expo-grid { gap: 64px; grid-template-columns: minmax(0, 1.6fr) minmax(270px, .8fr); }
+.ochir-home .oc-expo-wordmark { font-size: clamp(46px, 5.6vw, 76px); }
+.ochir-home .oc-expo-wordmark span { font-size: clamp(18px, 2vw, 26px); }
+.ochir-home .oc-expo-headline { margin-top: 26px; font-size: clamp(23px, 2.3vw, 30px); }
+.ochir-home .oc-expo-intro { font-size: 16px; max-width: 640px; }
+.ochir-home .oc-expo-ticket { padding: 30px; }
+.ochir-home .oc-expo-year { font-size: 92px; }
+.ochir-home .expo-overview { padding: 28px 0 34px; }
+.ochir-home #expo-2027 { background: var(--paper); border-bottom: 1px solid var(--line); }
+.ochir-home .expo-audiences { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; border-top: 1px solid var(--line); padding-top: 24px; margin-bottom: 20px; }
+.ochir-home .expo-audiences article { display: flex; gap: 13px; }
+.ochir-home .audience-number { color: var(--accent); font-size: 11px; font-weight: 700; padding-top: 4px; }
+.ochir-home .expo-audiences h3 { font-size: 15px; line-height: 1.4; margin-bottom: 7px; }
+.ochir-home .expo-audiences p { color: var(--muted); font-size: 12px; line-height: 1.65; }
+.ochir-home .text-link { display: inline-flex; align-items: center; gap: 20px; font-size: 14px; font-weight: 700; min-height: 44px; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.ochir-home .text-link:hover { color: var(--accent); }
+.ochir-home .eyebrow { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .12em; margin: 0 0 16px; }
+.ochir-home .about-ochir { padding: 76px 0; background: #fff; border-bottom: 1px solid var(--line); }
+.ochir-home .about-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 80px; align-items: center; }
+.ochir-home .about-grid h2 { font-size: clamp(28px, 3vw, 40px); line-height: 1.25; letter-spacing: -.035em; max-width: 590px; }
+.ochir-home .about-welcome { font-size: 20px; font-weight: 700; margin: 0 0 14px; }
+.ochir-home .about-description { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+.ochir-home .mission, .ochir-home .projects, .ochir-home .get-involved, .ochir-home .contact { padding: 64px 0; background: #fff; border-bottom: 1px solid var(--line); }
+.ochir-home .mission h2, .ochir-home .projects h2, .ochir-home .get-involved h2, .ochir-home .contact h2, .ochir-home .partners-title { color: var(--ink); text-align: left; font-size: clamp(27px, 3vw, 36px); line-height: 1.3; letter-spacing: -.025em; margin: 0 0 32px; }
+.ochir-home .mission-content, .ochir-home .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.ochir-home .mission-box, .ochir-home .project-card, .ochir-home .involvement-card { padding: 26px; border: 1px solid var(--line); border-top: 3px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); box-shadow: none; text-align: left; transition: none; }
+.ochir-home .mission-box:hover, .ochir-home .project-card:hover, .ochir-home .involvement-card:hover { transform: none; box-shadow: none; }
+.ochir-home .involvement-card:hover { background: #fff; border-color: var(--line); border-top-color: var(--ink); }
+.ochir-home .mission-box h3, .ochir-home .project-card h3, .ochir-home .involvement-card h3 { font-size: 21px; line-height: 1.4; color: var(--ink); text-decoration: none; margin: 0 0 14px; }
+.ochir-home .mission-box p, .ochir-home .project-card p, .ochir-home .involvement-card p { font-size: 15px; color: var(--muted); line-height: 1.8; margin: 0; }
+.ochir-home .projects { background: var(--paper); }
+.ochir-home .project-icon { font-size: 25px; margin-bottom: 18px; }
+.ochir-home .partners-section { width: min(1180px, calc(100% - 64px)); margin: auto; padding: 64px 0; background: #fff; text-align: left; }
+.ochir-home .partners-grid { display: block; max-width: none; }
+.ochir-home .partner-card { display: grid; grid-template-columns: 150px 1fr; column-gap: 36px; align-items: center; padding: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 0; box-shadow: none; text-align: left; max-width: none; }
+.ochir-home .partner-card:hover { transform: none; box-shadow: none; }
+.ochir-home .partner-logo { width: 150px; height: 120px; object-fit: contain; grid-row: span 2; margin: 0; }
+.ochir-home .partner-name { font-size: 21px; color: var(--ink); margin: 0 0 8px; font-weight: 700; }
+.ochir-home .partner-desc { font-size: 15px; color: var(--muted); line-height: 1.8; }
+.ochir-home .get-involved { background: var(--paper); }
+.ochir-home .get-involved-content { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ochir-home .contact-content { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+.ochir-home .contact-info { display: block; }
+.ochir-home .info-item { margin: 0 0 24px; padding: 0 0 20px; background: transparent; border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--line); }
+.ochir-home .info-item h3 { font-size: 14px; margin-bottom: 6px; color: var(--muted); }
+.ochir-home .info-item p, .ochir-home .info-item a { display: block; color: var(--ink); font-size: 16px; overflow-wrap: anywhere; }
+.ochir-home .contact-form { display: block; padding: 28px; background: var(--paper); border: 1px solid var(--line); border-radius: 0; box-shadow: none; }
+.ochir-home .form-field { margin-bottom: 17px; }
+.ochir-home .form-field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.ochir-home .contact-form input, .ochir-home .contact-form textarea { display: block; width: 100%; min-width: 0; border: 1px solid #aebdc7; border-radius: 3px; padding: 11px 12px; min-height: 46px; background: #fff; color: var(--ink); font: inherit; font-size: 16px; margin: 0; }
+.ochir-home .contact-form textarea { resize: vertical; }
+.ochir-home .contact-form input:focus, .ochir-home .contact-form textarea:focus { border-color: var(--ink); box-shadow: none; }
+.ochir-home .submit-btn { min-height: 48px; background: var(--ink); color: #fff; border: 1px solid var(--ink); border-radius: 3px; font-size: 14px; padding: 12px 20px; font-weight: 700; cursor: pointer; width: auto; }
+.ochir-home .submit-btn:hover { background: #234767; transform: none; box-shadow: none; }
+.ochir-home .form-notice, .ochir-home #contact-status { font-size: 12px; color: var(--muted); margin-top: 14px; }
+.ochir-home .site-footer { padding: 40px 0; background: var(--ink); color: #e0e8ef; }
+.ochir-home .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; font-size: 12px; }
+.ochir-home .site-footer strong { font-size: 20px; color: #fff; }
+.ochir-home .site-footer p { margin: 6px 0 12px; }
+.ochir-home .site-footer nav a { display: block; margin-bottom: 10px; text-underline-offset: 3px; }
+.ochir-home .social-links { display: block; margin: 0; }
+.ochir-home .social-links span { display: inline-block; margin-right: 10px; color: #b4c2cf; }
+
+@media (max-width: 1100px) {
+  .ochir-home .site-header-inner { gap: 16px; }
+  .ochir-home .nav-menu { gap: 14px; }
+  .ochir-home .site-brand small { max-width: 135px; }
+  .ochir-home .oc-expo-grid { gap: 30px; }
+}
+@media (max-width: 1000px) {
+  .ochir-home .site-header-inner { flex-wrap: wrap; min-height: 82px; padding-block: 10px; }
+  .ochir-home .header-controls { margin-left: auto; }
+  .ochir-home .site-header nav { order: 3; width: 100%; margin: 0; }
+  .ochir-home .nav-menu { flex-wrap: wrap; }
+  .ochir-home.home-enhanced .site-header nav { position: static; padding: 0; }
+  .ochir-home.home-enhanced #site-menu { display: none; }
+  .ochir-home.home-enhanced #site-menu.is-open { display: grid; grid-template-columns: 1fr 1fr; padding: 12px 0 8px; border-top: 1px solid var(--line); max-height: 65vh; overflow-y: auto; }
+  .ochir-home.home-enhanced .site-header:has(.nav-menu:not(.is-open)) nav { display: contents; }
+  .ochir-home.home-enhanced .menu-toggle { display: flex; gap: 10px; align-items: center; justify-content: center; min-height: 44px; padding: 0 10px; border: 1px solid #b5c2cc; border-radius: 3px; background: #fff; color: var(--ink); font-size: 12px; cursor: pointer; }
+  .ochir-home .menu-lines, .ochir-home .menu-lines::before, .ochir-home .menu-lines::after { display: block; width: 16px; height: 1.5px; background: var(--ink); position: relative; }
+  .ochir-home .menu-lines::before, .ochir-home .menu-lines::after { content: ""; position: absolute; }
+  .ochir-home .menu-lines::before { top: -5px; }
+  .ochir-home .menu-lines::after { top: 5px; }
+  .ochir-home .site-brand small { max-width: 180px; }
+  .ochir-home .about-grid { gap: 36px; }
+  .ochir-home .mission-content, .ochir-home .projects-grid { gap: 16px; }
+  .ochir-home .mission-box, .ochir-home .project-card { padding: 20px; }
+  .ochir-home .contact-content { gap: 36px; }
+}
+@media (max-width: 700px) {
+  .ochir-home .container, .ochir-home .oc-expo-wrap, .ochir-home .partners-section { width: calc(100% - 36px); }
+  .ochir-home .site-header-inner { width: calc(100% - 28px); gap: 8px; min-height: 78px; }
+  .ochir-home .brand-mark { width: 44px; height: 44px; flex-basis: 44px; }
+  .ochir-home .brand-mark img { width: 98px; height: 55px; left: -27px; top: -5.5px; }
+  .ochir-home .site-brand { gap: 7px; }
+  .ochir-home .site-brand strong { font-size: 17px; }
+  .ochir-home .site-brand small { display: none; }
+  .ochir-home .header-controls { gap: 6px; }
+  .ochir-home .site-language button { min-width: 35px; font-size: 11px; }
+  .ochir-home .menu-toggle > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .ochir-home.home-enhanced .menu-toggle { min-width: 38px; padding: 0 8px; }
+  .ochir-home .oc-expo-hero { padding: 30px 0 24px; }
+  .ochir-home .oc-expo-grid { grid-template-columns: 1fr; gap: 28px; }
+  .ochir-home .oc-expo-wordmark { font-size: clamp(42px, 11.4vw, 62px); }
+  .ochir-home .oc-expo-wordmark span { font-size: clamp(17px, 4.8vw, 24px); }
+  .ochir-home .oc-expo-headline { font-size: 24px; }
+  .ochir-home .oc-expo-ticket { padding: 24px; }
+  .ochir-home .oc-expo-year { font-size: 76px; }
+  .ochir-home .expo-overview { padding: 20px 0 28px; }
+  .ochir-home .expo-audiences { grid-template-columns: 1fr; gap: 20px; }
+  .ochir-home .expo-audiences p { font-size: 13px; }
+  .ochir-home .about-ochir, .ochir-home .mission, .ochir-home .projects, .ochir-home .get-involved, .ochir-home .contact, .ochir-home .partners-section { padding-block: 42px; }
+  .ochir-home .about-grid, .ochir-home .mission-content, .ochir-home .projects-grid, .ochir-home .get-involved-content, .ochir-home .contact-content, .ochir-home .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .ochir-home .about-grid h2 { font-size: 30px; }
+  .ochir-home .mission h2, .ochir-home .projects h2, .ochir-home .get-involved h2, .ochir-home .contact h2, .ochir-home .partners-title { font-size: 28px; margin-bottom: 24px; }
+  .ochir-home .partner-card { grid-template-columns: 1fr; padding: 24px; gap: 12px; }
+  .ochir-home .partner-logo { grid-row: auto; width: 120px; height: 100px; }
+  .ochir-home .contact-form { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ochir-home *, .ochir-home *::before, .ochir-home *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
